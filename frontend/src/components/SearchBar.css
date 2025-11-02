@@ -5,13 +5,16 @@
   margin-bottom: 30px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
   border: 1px solid #f0f0f0;
+  display: block;
+  visibility: visible;
 }
 
 .search-bar h3 {
   color: #333;
-  margin-bottom: 10px;
-  font-size: 20px;
+  margin-bottom: 15px;
+  font-size: 22px;
   font-weight: 600;
+  display: block;
 }
 
 .active-filters-info {

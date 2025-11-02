@@ -5,6 +5,22 @@
   min-height: calc(100vh - 100px);
 }
 
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 18px;
+}
+
+.error-message {
+  background: #fee;
+  color: #c33;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+  border: 1px solid #fcc;
+}
+
 .dashboard-header {
   text-align: center;
   color: white;
