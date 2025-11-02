@@ -745,41 +745,24 @@ During the development of this project, I used the following AI tools:
 
 ### My Reflection on AI Impact
 
-#### Positive Aspects
+Positive Aspects:
+- AI tools helped me understand complex concepts faster
+- Saved time on boilerplate code so I could focus on logic
+- Helped debug errors when I was stuck
+- Suggested best practices for code structure
 
-1. Accelerated Learning: AI tools helped me understand complex concepts faster by providing clear explanations and examples.
-
-2. Time Savings: AI-assisted boilerplate generation allowed me to focus more time on implementing custom logic and business rules.
-
-3. Debugging Support: When encountering errors, AI tools helped identify the root cause faster, especially for error messages I hadn't seen before.
-
-4. Code Quality: Suggestions for best practices helped me write more maintainable and readable code.
-
-5. Educational Value: Using AI as a learning tool helped me understand why certain patterns and practices are recommended.
-
-#### Challenges Faced
-
-1. Context Understanding: Sometimes AI suggestions didn't perfectly fit my specific requirements, requiring significant modifications.
-
-2. Verification Necessary: I learned that AI suggestions need thorough testing and verification, as they're not always perfect.
-
-3. Over-reliance Risk: I had to be careful not to just copy code without understanding it, ensuring I actually learned from the process.
-
-4. Customization Required: Most AI-generated code needed customization to fit the project's specific needs and design requirements.
+Challenges:
+- Sometimes AI suggestions needed significant modifications
+- Had to test everything thoroughly
+- Made sure to understand code before using it
 
 ### How I Used AI Responsibly
 
-1. Understanding First: I always read and understood any AI-generated code before using it in the project.
-
-2. Customization: I modified and customized all AI suggestions to fit my specific project requirements and design.
-
-3. Testing: I thoroughly tested all code, whether AI-assisted or written from scratch, to ensure it worked correctly.
-
-4. Learning Focus: I used AI primarily as a learning tool rather than just a code generator, ensuring I understood the concepts.
-
-5. Original Logic: I wrote all the actual business logic, state management, and application-specific features myself.
-
-6. No Direct Copying: I never copied code directly without understanding it or adapting it to my project.
+- I always read and understood AI-generated code before using it
+- I modified all AI suggestions to fit my project needs
+- I tested everything thoroughly to make sure it worked
+- I used AI as a learning tool, not just for copying code
+- I wrote all the business logic and features myself
 
 ### Commit Message Format
 

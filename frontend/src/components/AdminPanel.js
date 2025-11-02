@@ -75,6 +75,16 @@ const AdminPanel = ({ user }) => {
     }
   };
 
+  const handleSell = async (id, quantity) => {
+    try {
+      await sweetsAPI.purchase(id, quantity);
+      await loadSweets();
+      alert(`Successfully sold ${quantity} item(s)! Quantity updated.`);
+    } catch (err) {
+      alert(err.message || 'Failed to sell sweet');
+    }
+  };
+
   const handleEdit = (sweet) => {
     setEditingSweet(sweet);
     setShowForm(true);
@@ -123,6 +133,7 @@ const AdminPanel = ({ user }) => {
           onEdit={handleEdit}
           onDelete={handleDelete}
           onRestock={handleRestock}
+          onSell={handleSell}
         />
       )}
     </div>

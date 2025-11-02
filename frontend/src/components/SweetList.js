@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import './SweetList.css';
 
-const SweetList = ({ sweets, onEdit, onDelete, onRestock }) => {
+const SweetList = ({ sweets, onEdit, onDelete, onRestock, onSell }) => {
   const [restockData, setRestockData] = useState({});
+  const [sellData, setSellData] = useState({});
 
   const handleRestock = (id) => {
     const quantity = parseInt(restockData[id] || 0);
@@ -12,6 +13,20 @@ const SweetList = ({ sweets, onEdit, onDelete, onRestock }) => {
     } else {
       alert('Please enter a valid quantity');
     }
+  };
+
+  const handleSell = (id, sweet) => {
+    const quantity = parseInt(sellData[id] || 0);
+    if (quantity <= 0) {
+      alert('Please enter a valid quantity to sell');
+      return;
+    }
+    if (quantity > sweet.quantity) {
+      alert(`Cannot sell ${quantity} items. Only ${sweet.quantity} available in stock.`);
+      return;
+    }
+    onSell(id, quantity);
+    setSellData({ ...sellData, [id]: '' });
   };
 
   if (sweets.length === 0) {
@@ -35,6 +50,7 @@ const SweetList = ({ sweets, onEdit, onDelete, onRestock }) => {
               <th>Price (₹)</th>
               <th>Quantity</th>
               <th>Restock</th>
+              <th>Sell</th>
               <th>Actions</th>
             </tr>
           </thead>
@@ -63,6 +79,27 @@ const SweetList = ({ sweets, onEdit, onDelete, onRestock }) => {
                       className="btn-restock"
                     >
                       Add
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <div className="sell-controls">
+                    <input
+                      type="number"
+                      min="1"
+                      max={sweet.quantity}
+                      value={sellData[sweet.id] || ''}
+                      onChange={(e) => setSellData({ ...sellData, [sweet.id]: e.target.value })}
+                      placeholder="Qty"
+                      className="sell-input"
+                      disabled={sweet.quantity === 0}
+                    />
+                    <button
+                      onClick={() => handleSell(sweet.id, sweet)}
+                      className="btn-sell"
+                      disabled={sweet.quantity === 0}
+                    >
+                      Sell
                     </button>
                   </div>
                 </td>
