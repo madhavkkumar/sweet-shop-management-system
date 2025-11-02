@@ -2,6 +2,8 @@
 
 A comprehensive full-stack web application for managing a sweet shop inventory with user authentication, role-based access control, and real-time inventory management. Built with Node.js, Express, React, and SQLite.
 
+**Repository:** [https://github.com/madhavkkumar/sweet-shop-management-system](https://github.com/madhavkkumar/sweet-shop-management-system)
+
 ## Table of Contents
 
 - [Project Overview](#project-overview)
