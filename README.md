@@ -317,6 +317,42 @@ Note: For production use, change the default admin password immediately.
 
 ## Screenshots
 
+### User Dashboard
+
+![User Dashboard Screenshot](screenshots/user-dashboard.png)
+
+The User Dashboard provides customers with an intuitive interface to browse, search, and purchase sweets. This screenshot shows the complete user experience:
+
+Key Features Visible:
+
+- Welcome Section: Personalized greeting and sweets count display
+
+- Search & Filter Bar: Comprehensive search functionality with:
+  - Name search: Find sweets by name
+  - Category filter: Filter by sweet category
+  - Price range: Min and Max price filters
+  - Search and Clear buttons for easy control
+  - Active filter indicator showing number of applied filters
+
+- Sweets Grid: Beautiful card-based display showing:
+  - Sweet name and category badge
+  - Price in Indian Rupees (₹)
+  - Stock status with visual indicators:
+    - In Stock: Normal display
+    - Low Stock: Yellow warning (quantity < 5)
+    - Out of Stock: Red indicator with disabled purchase button
+  - Quantity selector: Choose how many items to purchase
+  - Purchase button: Shows total price, disabled when out of stock
+
+- User Interface: Modern, responsive design with:
+  - Gradient background
+  - Card-based layout
+  - Smooth animations
+  - Color-coded stock indicators
+  - Disabled state for out-of-stock items
+
+The interface enables users to easily search for their favorite sweets, view availability, and make purchases with a seamless experience.
+
 ### Admin Panel
 
 ![Admin Panel Screenshot](screenshots/admin-panel.png)
@@ -337,6 +373,7 @@ Key Features Visible:
   - Price: Displayed in Indian Rupees (₹1000.00, ₹101.00)
   - Quantity: Current stock levels with low stock highlighting
   - Restock: Quick restock functionality with quantity input and "Add" button
+  - Sell: Direct sell functionality with quantity input
   - Actions: Edit and Delete buttons for each item
 
 - User Interface: Clean, modern design with:
@@ -346,7 +383,7 @@ Key Features Visible:
   - Responsive button design
   - Clear visual hierarchy
 
-The interface allows administrators to have complete visibility and control over inventory with quick access to all management functions (Add, Edit, Delete, Restock).
+The interface allows administrators to have complete visibility and control over inventory with quick access to all management functions (Add, Edit, Delete, Restock, Sell).
 
 ---
 
