@@ -1,0 +1,153 @@
+.sweet-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.sweet-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.sweet-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  border-color: #667eea;
+}
+
+.sweet-card.out-of-stock {
+  opacity: 0.6;
+  background: #f8f9fa;
+  cursor: not-allowed;
+}
+
+.sweet-card.out-of-stock::before {
+  background: #dc3545;
+}
+
+.sweet-card.low-stock::before {
+  background: #ffc107;
+}
+
+.stock-low {
+  color: #ff9800;
+  font-weight: 600;
+}
+
+.out-of-stock-section {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.sweet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 15px;
+}
+
+.sweet-header h3 {
+  color: #333;
+  font-size: 20px;
+  flex: 1;
+}
+
+.category-badge {
+  background: #667eea;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.sweet-details {
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 28px;
+  font-weight: bold;
+  color: #667eea;
+  margin-bottom: 8px;
+}
+
+.stock {
+  color: #666;
+  font-size: 14px;
+}
+
+.stock-zero {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+.purchase-section {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.quantity-selector label {
+  font-weight: 500;
+  color: #555;
+}
+
+.quantity-selector input {
+  width: 80px;
+  padding: 10px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  transition: border-color 0.3s;
+}
+
+.quantity-selector input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.purchase-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.purchase-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.purchase-btn:disabled,
+.purchase-btn.disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
